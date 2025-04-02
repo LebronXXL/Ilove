@@ -3,28 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content='width=device-width, initial-scale=1.0'>
-    <title></title>
+    <title>Мої проєкти</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        body {
+            font-family: 'Arial', sans-serif; /* Гарний шрифт */
+            background-color: #f0f8ff; /* Світло-блакитний фон */
+            color: #333; /* Темний текст */
+            margin: 0;
+            padding: 0;
         }
 
-        button:hover {
-            opacity: 0.9;
-        }
-
-        #emoji-word button {
-            background-color: #4CAF50; /* Зелений */
+        header {
+            background-color: #4682b4; /* Синій */
             color: white;
+            padding: 20px;
+            text-align: center;
         }
 
-        #emoji-word button:hover {
-            background-color: #45a049;
+        section {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff; /* Білий фон для секцій */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            font-family: 'Georgia', serif; /* Шрифт для заголовків */
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        a {
+            color: #4682b4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #4682b4;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -37,9 +67,9 @@
         <h2>Про мене</h2>
         <p>Мене звати Юра. Я - баяніст, який:</p>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Любить музику</li>
+            <li>Цікавиться програмуванням</li>
+            <li>Прагне створювати щось нове</li>
         </ul>
     </section>
 
@@ -57,32 +87,8 @@
         </ul>
     </section>
 
-    <section id="emoji-word">
-        <h2>Введіть слово зі смайликів</h2>
-        <p>Складіть слово "😊👍" (усмішка і палець вгору):</p>
-        <input type="text" id="emojiInput" placeholder="Введіть слово">
-        <button onclick="checkEmojiWord()">Перевірити</button>
-        <p id="result"></p>
-    </section>
-
     <footer>
         <p>&copy; 2024 Тарас Шевченко. Усі права захищені.</p>
     </footer>
-
-    <script>
-        function checkEmojiWord() {
-            const correctWord = "😊👍";
-            const userInput = document.getElementById("emojiInput").value;
-            const result = document.getElementById("result");
-
-            if (userInput === correctWord) {
-                result.textContent = "Правильно! 🎉";
-                result.style.color = "green";
-            } else {
-                result.textContent = "Неправильно. Спробуйте ще раз.";
-                result.style.color = "red";
-            }
-        }
-    </script>
 </body>
 </html>
