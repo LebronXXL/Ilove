@@ -31,8 +31,32 @@
         </ul>
     </section>
 
+    <section id="emoji-word">
+        <h2>Введіть слово зі смайликів</h2>
+        <p>Складіть слово "😊👍" (усмішка і палець вгору):</p>
+        <input type="text" id="emojiInput" placeholder="Введіть слово">
+        <button onclick="checkEmojiWord()">Перевірити</button>
+        <p id="result"></p>
+    </section>
+
     <footer>
         <p>&copy; 2024 Тарас Шевченко. Усі права захищені.</p>
     </footer>
+
+    <script>
+        function checkEmojiWord() {
+            const correctWord = "😊👍";
+            const userInput = document.getElementById("emojiInput").value;
+            const result = document.getElementById("result");
+
+            if (userInput === correctWord) {
+                result.textContent = "Правильно! 🎉";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Неправильно. Спробуйте ще раз.";
+                result.style.color = "red";
+            }
+        }
+    </script>
 </body>
-</html> 
+</html>
